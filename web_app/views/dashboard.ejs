@@ -1,0 +1,60 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= user.name %></p>
+
+<div class="container">
+    <div class="card border-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Trip Details</div>
+        <div class="card-body">
+          <h4 class="card-title">Happy Journey</h4>
+          <p class="card-text">Vahicle Id : <%= user.noplate %></p>
+          <% if(!status) { %>
+            <form action="/dashboard" method="POST">
+              <div class="form-group">
+                <label for="from">From</label>
+                <input
+                  type="text"
+                  id="from"
+                  name="from"
+                  class="form-control"
+                  placeholder="Pune"
+                />
+              </div>
+              <div class="form-group">
+                <label for="to">To</label>
+                <input
+                  type="text"
+                  id="to"
+                  name="to"
+                  class="form-control"
+                  placeholder="Mumbai"
+                />
+              </div>
+              <button type="button" data-toggle="modal" data-target="#payModal" class="btn btn-primary btn-block">Pay</button>
+              <div class="modal" id="payModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Payment</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Pay 100</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Checkout</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          <% } else { %>
+            <button type="button" class="btn btn-primary" disabled>Paid</button>
+          <% } %>
+        </div>
+      </div>
+</div>
+
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
