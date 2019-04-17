@@ -18,8 +18,7 @@ params = urllib.parse.urlencode({
 
 try:
     conn = http.client.HTTPSConnection('centralindia.api.cognitive.microsoft.com')
-    body = open('/home/pi/piproject/images/car.jpg', 'rb').read()
-    #body = json.dumps({"url" : "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=http%3a%2f%2fcdni.autocarindia.com%2fExtraImages%2f20180402113123_NumberPlate_Swift.jpg&h=578&w=872&c=0"})
+    body = open('/home/pi/piproject/images/car.jpg', 'rb').read() //Change directory path for images
     conn.request("POST", "/vision/v1.0/ocr?%s" % params, body, headers)
     response = conn.getresponse()
     data = response.read()
