@@ -63,3 +63,38 @@ startlog = db.startup_log
 startlog.find_one()
 ```
 
+## Circuit  Connections
+
+IR sensor 
+* Connect Vout to signal pin 16 of Pi 3.
+* Connect Ground to signal pin 34 of Pi 3.
+* Connect Vcc to signal pin 4 of Pi 3.
+
+Note : Here signal pin does not mean GPIO pin.
+
+Servo Motor
+* Connect Orange(PWM) wire to signal pin 3 of Pi 3.
+* Connect Red(+5v) wire to signal pin 2 of Pi 3.
+* Connect Brown(Ground) wire to signal pin 6 of Pi 3.
+
+Pi Camera
+* Insert the cable of Pi camera to camera module of Pi 3.
+
+## Running the project
+
+Part 1 (pi 3 part)
+1. After connecting all the connections with Pi 3 properly, start the Pi 3 and open Thonny Editor.
+2. Open data_extractor.py and paste your user id and password from [MongoDb Atlas](https://www.mongodb.com/cloud/atlas)
+3. Run the servo.py.
+
+Part 2 (Web Interface)
+
+1. Open app.js and paste your user id and password of mongodb atlas.
+2. Then run app.js by typing below command in terminal.
+
+```node.js
+node ap.js
+```
+3. Go on to the browser and type localhost:PORT (PORT = 8000).
+
+The web app demo is shown [here](https://pure-beyond-56772.herokuapp.com/).
