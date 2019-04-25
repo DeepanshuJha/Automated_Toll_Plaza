@@ -93,7 +93,7 @@ Part 2 (Web Interface)
 2. Then run app.js by typing below command in terminal.
 
 ```node.js
-node ap.js
+node app.js
 ```
 3. Go on to the browser and type localhost:PORT (PORT = 8000).
 
