@@ -4,7 +4,7 @@ This is a IoT based project. As we know that standing at toll plaza for so many 
 
 Otherwise the user has to pay the toll. So there are two lanes for incoming and outgoing. One we will use for the users who have paid the task already and they can use the fast lane and the other who have not paid will use the normal lane.
 
-Lets now install the Hardware and Software part of project.
+Let's now install the Hardware and Software part of project.
 
 ## Hardware Requirements
 
@@ -95,6 +95,6 @@ Part 2 (Web Interface)
 ```node.js
 node app.js
 ```
-3. Go on to the browser and type localhost:PORT (PORT = 8000).
+3. Go on to the browser and type localhost:8000.
 
 The web app demo is shown [here](https://pure-beyond-56772.herokuapp.com/).
